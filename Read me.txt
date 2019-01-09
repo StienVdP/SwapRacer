@@ -1,0 +1,12 @@
+Jeu réalisé lors d'une GameJam avec les thèmes suivant : 
+
+Changement, 
+
+Course
+
+, Multi-joueurs local
+
+ et Stratégie.
+
+
+Le but est d'arriver le premier à la fin tout en survivant les changements que le vaisseaux subit.

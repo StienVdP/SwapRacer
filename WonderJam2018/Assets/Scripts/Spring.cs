@@ -5,6 +5,8 @@ using UnityEngine;
 public class Spring : MonoBehaviour
 {
     public Vector2 jumpForce;
+    public bool isDangerous;
+    public AudioSource SpringSound;
 
     // Use this for initialization
     void Start()
@@ -27,9 +29,15 @@ public class Spring : MonoBehaviour
                 collision.GetComponent<Rigidbody2D>().velocity = new Vector2(x, 0f);
                 collision.GetComponent<Rigidbody2D>().AddForce(jumpForce, ForceMode2D.Impulse);
                 GetComponent<Animator>().SetTrigger("animTrampoline");
+                PlayAudio();
             }
           
         }
+    }
+    public void PlayAudio()
+    {
+        SpringSound = GetComponent<AudioSource>();
+        SpringSound.Play(0);
     }
 
 }
